@@ -265,7 +265,7 @@
                                               <div class="widget-wrapper">
                                                 <div class="children">
                                                   <div class="widget image-widget" id="WireframeImage">
-                                                    <div class="widget-wrapper">
+                                                    <div class="widget-wrapper" id="WireframeImageSelector">
                                                       <a class="display toggle">
                                                         <canvas class="preview" height="1" width="1"></canvas>
                                                       </a>
@@ -330,11 +330,19 @@
                                                       <div class="children">
                                                         <div class="widget slider-widget">
                                                           <div class="widget-wrapper">
-                                                            <div class="bar">
+                                                            <!--<div class="bar">
                                                               <div class="slide" style="width: 100%;">
                                                                 <div class="cursor"></div>
                                                               </div>
-                                                            </div>
+                                                            </div>-->
+                                                            <input id="WireFrameSlider"
+                                                                   type="rangeWireFrame" 
+                                                                   min="0"                    
+                                                                   max="100"                  
+                                                                   step="0.2"                  
+                                                                   value="50"                 
+                                                                   data-orientation="horizontal" // default horizontal
+                                                            >
                                                           </div>
                                                         </div>
                                                         <div class="widget number-widget">
@@ -342,7 +350,7 @@
                                                             <div class="decrease">
                                                               <a></a>
                                                             </div>
-                                                            <input class="value" value="100">
+                                                            <input class="value" id="WireFrameSliderValue" value="100">
                                                             <div class="increase">
                                                               <a></a>
                                                             </div>
@@ -440,7 +448,7 @@
                                                         <br>Milkyway
                                                         (
                                                         <a
-                                                        href="#"
+                                                        href="#"0
                                                         data-action="goToLightningTab">change</a>)</span> </div>
                                                       <div class="widget widget-label">
                                                         <label class="label">Blur</label>
@@ -471,11 +479,19 @@
                                                             <div class="children">
                                                               <div class="widget slider-widget">
                                                                 <div class="widget-wrapper">
-                                                                  <div class="bar">
+                                                                  <!--<div class="bar">
                                                                     <div class="slide" style="width: 50%;">
                                                                       <div class="cursor"></div>
                                                                     </div>
-                                                                  </div>
+                                                                  </div>-->
+                                                                  <input id="BrightnessSlider"
+                                                                         type="rangeBrightness" 
+                                                                         min="0"                    
+                                                                         max="2"                  
+                                                                         step="0.02"                  
+                                                                         value="1"                 
+                                                                         data-orientation="horizontal" // default horizontal
+                                                                   >
                                                                 </div>
                                                               </div>
                                                               <div class="widget number-widget">
@@ -483,7 +499,7 @@
                                                                   <div class="decrease">
                                                                     <a></a>
                                                                   </div>
-                                                                  <input class="value" value="1">
+                                                                  <input class="value"  id="BrightnessSliderValue" value="1">
                                                                   <div class="increase">
                                                                     <a></a>
                                                                   </div>

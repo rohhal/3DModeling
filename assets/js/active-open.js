@@ -60,6 +60,8 @@ $(document).ready(function(){
         /* I have marked these options name in html code as commnents.*/
         var rendererType = ["classic","pbr","matcap"];
         var shadingType = ["lit","shadeless"];
+        var vertextColorType =   ["linear","srgb"];
+        var blurValue =   ["0","0.02","0.055","0.1"];
         
 
         var optionsToSwitch;
@@ -72,7 +74,11 @@ $(document).ready(function(){
             $("#selectedShading").attr("title",titleValue);
             $("#selectedShading").text(titleValue);
 
-        }
+        } else if(vertextColorType.indexOf(dataValue) > -1 ) {
+            optionsToSwitch = vertextColorType;
+        } else if(blurValue.indexOf(dataValue) > -1 ) {
+            optionsToSwitch = blurValue;
+        } 
 
         for( var i=0; i<optionsToSwitch.length; i++) {
             $("[data-value='"+optionsToSwitch[i]+"']").removeClass("active");
@@ -98,6 +104,10 @@ $(document).ready(function(){
     $("[data-value='shadeless']").hover(
         function(){$(this).toggleClass("cursor");}
     );
+
+    $("#WireframeImageSelector").click(function(e){
+        $(this).parent().toggleClass("opened");
+    })
 
 
 });
