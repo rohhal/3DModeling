@@ -55,7 +55,6 @@ $(document).ready(function(){
 
     /* Options to switch */
     $("ul.options li").click(function(e){ 
-        console.log("click registered");
         var dataValue = this.getAttribute("data-value");
 
         /* I have marked these options name in html code as commnents.*/
@@ -68,9 +67,11 @@ $(document).ready(function(){
         if(rendererType.indexOf(dataValue) > -1 ) {
             optionsToSwitch = rendererType;
         } else if(shadingType.indexOf(dataValue) > -1 ) {
+            var titleValue = this.getAttribute("title");
             optionsToSwitch = shadingType;
-            var mainSelection = $(this).parent();
-            console.log(mainSelection);
+            $("#selectedShading").attr("title",titleValue);
+            $("#selectedShading").text(titleValue);
+
         }
 
         for( var i=0; i<optionsToSwitch.length; i++) {
