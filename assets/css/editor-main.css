@@ -240,6 +240,7 @@ table {
     border-collapse: collapse;
     border-spacing: 0
 }
+/*
 @charset "UTF-8";
 @font-face {
     font-family: 'Open Sans';
@@ -307,7 +308,7 @@ table {
     src: url(/static/builds/web/dist/fontawesome-webfont-32400f4e08932a94d8bfd2422702c446.eot?#iefix&v=4.5.0) format('embedded-opentype'), url(/static/builds/web/dist/fontawesome-webfont-db812d8a70a4e88e888744c1c9a27e89.woff2) format('woff2'), url(/static/builds/web/dist/fontawesome-webfont-a35720c2fed2c7f043bc7e4ffb45e073.woff) format('woff'), url(/static/builds/web/dist/fontawesome-webfont-a3de2170e4e9df77161ea5d3f31b2668.ttf) format('truetype'), url(/static/builds/web/dist/fontawesome-webfont-f775f9cca88e21d45bebe185b27c0e5b.svg#fontawesomeregular) format('svg');
     font-weight: 400;
     font-style: normal
-}
+}*/
 .fa,
 .icons-twitter,
 .icons-facebook,
@@ -2425,13 +2426,13 @@ table {
 .fa-percent:before {
     content: "\f295"
 }
-@font-face {
+/*@font-face {
     font-family: 'custom-icons';
     src: url(/static/builds/web/dist/custom-icons-f6ae2e91f91d1eed46dc5d3d27041445.eot);
     src: url(/static/builds/web/dist/custom-icons-f6ae2e91f91d1eed46dc5d3d27041445.eot#iefix) format('embedded-opentype'), url(/static/builds/web/dist/custom-icons-890691d7795750660eac499aa1cd78e5.woff) format('woff'), url(/static/builds/web/dist/custom-icons-a6901b8128cc739fff25b5b88bd23920.ttf) format('truetype'), url(/static/builds/web/dist/custom-icons-686dd8b7c5db5993914a855360f7cdb6.svg#custom-icons) format('svg');
     font-weight: 400;
     font-style: normal
-}
+}*/
 [class^="custom-icons"],
 [class*="custom-icons"] {
     speak: none;

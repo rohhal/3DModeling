@@ -1,5 +1,6 @@
+console.log("active-open.js loaded");
+
 $(document).ready(function(){
-    
 
     /* THE MAIN-TABS */
     $("ul.tabs li").click(function(e){ 
@@ -29,7 +30,6 @@ $(document).ready(function(){
         
     });
 
-
     $(".label").click(function(e){ 
 
         /* THE INNER OPTIONS EXPANSION */
@@ -52,6 +52,51 @@ $(document).ready(function(){
     $(".checkbox-widget").click(function(e){ 
         $(this).toggleClass("active");
     });
+
+    /* Options to switch */
+    $("ul.options li").click(function(e){ 
+        console.log("click registered");
+        var dataValue = this.getAttribute("data-value");
+
+        /* I have marked these options name in html code as commnents.*/
+        var rendererType = ["classic","pbr","matcap"];
+        var shadingType = ["lit","shadeless"];
+        
+
+        var optionsToSwitch;
+
+        if(rendererType.indexOf(dataValue) > -1 ) {
+            optionsToSwitch = rendererType;
+        } else if(shadingType.indexOf(dataValue) > -1 ) {
+            optionsToSwitch = shadingType;
+            var mainSelection = $(this).parent();
+            console.log(mainSelection);
+        }
+
+        for( var i=0; i<optionsToSwitch.length; i++) {
+            $("[data-value='"+optionsToSwitch[i]+"']").removeClass("active");
+        }
+
+        $("[data-value='"+dataValue+"']").addClass("active");
+        
+    });
+
+    $("#ShadingSelect").click(function(e){ 
+
+        if($(this).hasClass("opened")) {
+            $(this).removeClass("opened");
+        } else {
+            $(this).addClass("opened");
+        }
+    });
+
+    $("[data-value='lit']").hover(
+        function(){$(this).toggleClass("cursor");}
+    );
+
+    $("[data-value='shadeless']").hover(
+        function(){$(this).toggleClass("cursor");}
+    );
 
 
 });

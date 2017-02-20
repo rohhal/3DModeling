@@ -3,6 +3,7 @@ var orientationX = 0;
 var orientationY = 0;
 var orientationZ = 0;
 
+console.log("orientation.js loaded");
 
 $(document).ready(function(){
     
@@ -14,7 +15,7 @@ $(document).ready(function(){
         defaultOrientaion();
         jQuery("advancedRotation").removeClass("active");
         stopAdvanceRotation();
-    });
+    }); 
 
     $(".orientation-widget .right").click(function(e) {
         var axis = $(this).parent().children()[1].innerHTML;
